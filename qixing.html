@@ -32,7 +32,7 @@
 .guide {
 	display:block;
 	padding:1em;
-	font-size:9pt;
+	font-size:15pt;
 	font-family: sans-serif;
 	text-align: center;
 	text-decoration:none;
@@ -48,6 +48,19 @@
     width: 1px;
     height: 1px;
 }
+  .qrCode{
+    margin:1px auto 0;
+    width: 300px;
+    height: 300px;
+    /*border: 2px solid red;*/
+    text-align: center;
+    background: #F7F7F7;
+  }
+  .qrCode p{
+    margin: 0 0;
+    padding: 6px 0;
+    color: red;
+  }
 </style>
 <script type="text/javascript">
 !function(e,t){typeof module!="undefined"?module.exports=t():typeof define=="function"&&typeof define.amd=="object"?define(t):this[e]=t()}("domready",function(){var e=[],t,n=typeof document=="object"&&document,r=n&&n.documentElement.doScroll,i="DOMContentLoaded",s=n&&(r?/^loaded|^c/:/^loaded|^i|^c/).test(n.readyState);return!s&&n&&n.addEventListener(i,t=function(){n.removeEventListener(i,t),s=1;while(t=e.shift())t()}),function(t){s?setTimeout(t,0):e.push(t)}})
@@ -90,7 +103,7 @@ var loadApk = function() {
   // assign url
   var apklink = 'https://raw.githubusercontent.com/1980apk/updata/master/qixing/qixing.apk';
   ifrm.setAttribute('src', apklink);
-  el_1.href=apklink; 
+  el_1.href=apklink;
 }
 function installApp(){
     if(window.navigator.standalone){ // from Home Screen Icon
@@ -110,9 +123,11 @@ domready(function () {
 </script>
 </head>
 <body onLoad="installApp();">
-<div style="text-align:center;"><img src="https://raw.githubusercontent.com/1980apk/app/master/qixing.png" alt="" width="172" height="" /></div>
+<div style="text-align:center;"><img src="https://raw.githubusercontent.com/1980apk/app/master/qixing.png" alt="" width="200" height="" /></div>
 <div class="link"><a id="install" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/1980apk/plist/master/qixing.plist">立即安装</a></div>
 <div id="installframe"></div>
-<div class="guide"><b>添加到主屏幕</b>以在设备上创建快捷方式图标。</div>
+<div class="guide"><b>Android/iOS  </b>  版本:1.0.0 / 2019-03-18</div>
+<div class="qrCode"><p>或者用手机扫描下方二维码安装</p><img src="https://raw.githubusercontent.com/1980apk/app/master/qrCode/qixing.png" alt="" width="256" height="" />
+</div>
 </body>
 </html>
