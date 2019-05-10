@@ -1,0 +1,253 @@
+/*
+作者：天兴工作室
+网址：https://www.txcstx.cn
+邮箱：admin@txcstx.cn
+*/
+html{ background: #fff;}
+::-webkit-scrollbar { width: 16px; height: 10px;}
+/*scroll shadow radius*/
+::-webkit-scrollbar-track { -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); border-radius: 10px; background-color: #ddd;}
+/*swipe inset radius*/
+::-webkit-scrollbar-thumb { border-radius: 10px; -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3); background-color: #029ed7;}
+.touch{ display: block; width: 100%; height: 1rem; line-height: 1rem; color: #fff; font-size: 0.46rem; text-align: center; border-radius: 0.06rem; background-image: url(img/download_btn.png); background-size: 100% 100%;}
+
+.down-box{position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 998;display: none;}
+.down-off{position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: 990;background-color:rgba(0,0,0,0.9);display: none;}
+.down-info{position: absolute;left: 50%;top: 100px;background-color: #fff;width: 300px;margin-left: -150px;text-align: center;z-index: 995;border-radius: 5px;line-height:1;}
+.down-info h2{font-size: 14px;line-height: 40px;background-color: #f1f1f1;border-radius:5px 5px 0 0;margin-bottom:10px;}
+.down-info p a{display: inline-block;font-size: 13px;background-color: #a360b9;line-height:30px;padding: 0 5px;width:60%;text-align:center;border-radius: 4px;color: #fff;margin-bottom:10px;}
+.down-info p:last-child a{background-color: #d6b05c;}
+.weixin-box{position: fixed;left: 0;top: 0;width: 100%;height: 100%;text-align: center;background:rgba(0,0,0,0.8);z-index: 99;display: none;}
+.weixin-box img{width: 100%;height: auto;}
+.ios-box{position: fixed;left: 0;top: 0;width: 96%;height: 100%;text-align: center;background:rgba(0,0,0,0.8);z-index: 99;padding: 0 2% 0 2%;display: none;}
+.ios-box img{max-width: 100%;}
+.ios-box .img1{margin-top:100px;}
+.ios-box p{position:absolute;bottom:0px;left:0;width:100%;}
+.ios-box p img{height:80px;width:auto;}
+.ios-box .img3{height:40px;width:auto;margin-bottom:10px;}
+.ios-off{position: absolute;right: 10px;top: 10px;width: 30px;height: 30px;}
+
+.max_width{ max-width: 720px; margin:0 auto; padding-bottom: 2rem;background-color: #fff;}
+.banner{ width: 100%; height: 5.17rem;}
+.banner img{ width: 100%;}
+.dw_area{ min-height: 1.6rem; padding: 0.18rem 0.22rem; position: relative;}
+.dw_area .in{ min-height: 1.6rem;}
+.dw_area .in .m{ display: block; width: 1.6rem; height: 1.6rem; position: absolute; left: 0.27rem; top:.18rem;}
+.dw_area .in .m img{ width: 100%;}
+.dw_area .in .rt_t{ padding:0.15rem 0 0 1.82rem; color: #343434;}
+.dw_area .in .rt_t h3{ font-size: 0.48rem;}
+.dw_area .in .rt_t span{display: inline-block; padding:0.15rem 0 0 2.3rem; font-size: 0.3rem; background: url(img/star.png) no-repeat 0 0.15rem; background-size: 2rem 0.4rem;}
+.btn{ padding: 0.54rem 0 0.24rem;}
+.gray_w{background: #ededed;}
+.game{ padding: 0.26rem 0.2rem; min-height: 4.17rem;box-sizing: border-box;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;-o-box-sizing: border-box; overflow: hidden;}
+.game_pic{ width: 100%; min-height: 4.17rem; white-space: nowrap; overflow-x: auto; overflow-scrolling : touch; -webkit-overflow-scrolling: touch;-moz-overflow-scrolling: touch;}
+.game_pic a img{ width: 40%; margin-right: 2.4%;}
+.game_lis{ margin-top: 0.38rem; padding: 0.3rem; border-top: 1px solid #d5d5d5; background: #ededed; }
+.game_lis h3{ font-size: 0.38rem; color: #333;}
+.game_lis ul{ padding: 0.32rem 0.24rem 0; min-height: 1.7rem;overflow: hidden;}
+.game_lis ul li{ width: 25%; float: left;}
+.game_lis ul li a{ display: block;}
+.game_lis ul li a .m{ display: block; width: 1.2rem; height: 1.2rem; margin: 0 auto;}
+.game_lis ul li a .m img{ width: 100%;}
+.game_lis ul li a .t{ width: 100%; text-align: center; color: #3333; font-size: 0.24rem; display: inline-block; margin-top: 0.16rem;}
+
+.dw_propt{ width: 100%;min-height: 1.54rem; background:rgba(255,255,255,0.77); position: fixed; left: 0; bottom: 0; box-shadow: 0 0 2px rgba(0,0,0,0.35);}
+.ppt_lt{ position: relative;}
+.img{ display: block; width: 1.1rem; height: 1.1rem; position: absolute; top: 0.22rem; left: 0.38rem; overflow: hidden;}
+.img img{ display: block; width: 100%; height: 100%;}
+.ppt_lt .lt_t{ padding: 0.30rem 0 0 1.74rem; color: #333;}
+.ppt_lt .lt_t h3{ font-size: 0.4rem;}
+.ppt_lt .lt_t span{ font-size: 0.28rem; color: #545454; display: block; margin-top: 0.15rem; }
+.ppt_lt_ii .lt_in{ margin: 0 0.3rem; position: relative; }
+.ppt_lt .ppt_dw{ display: block; width: 2.1rem; height: 0.9rem; line-height: 0.9rem; background: #43c117; color: #fff; text-align: center; font-size: 0.42rem; border-radius: 0.08rem; position: absolute; top: 0.33rem; right: 0.3rem;}
+.ppt_lt_ii .ppt_dw{ width: 100%; left: 0; right: 0}
+
+footer{ min-height: 0.80rem; padding: 0.23rem 0; border-top: 1px solid #ededed; background: #424a55; text-align: center;}
+footer p{ color: #c9c9c9; font-size: 0.28rem;}
+footer p:last-child{ margin-top: 0.1rem;}
+
+body {
+    background:#F0F8FF;
+    /*background-size: 100%;*/
+    overflow-x: hidden;
+}
+
+.dw_area .in.icons {
+    margin-top: 0.3rem;
+    width: 110%;
+}
+
+.dw_area .in.icons .m {
+    position: static;
+    display: inline-block;
+    width: 1.18rem;
+    height: 1.18rem;
+    margin-right: 0.14rem;
+    /*background: rgba(0, 0, 0, 0.5);*/
+}
+.dw_area .in.icons .item-m {
+    margin-bottom: 0.56rem;
+}
+.dw_area .in.icons .m .name, .dw_area.game-item .m .name {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.game-item {
+    margin: 0.25rem;
+    background: #eaf1f7;
+    height: 2.6rem;
+    border-radius: 0.06rem;
+    position: relative;
+    margin-top: -0.1rem;
+}
+.dw_area.game-item .m {
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    position: absolute;
+}
+
+.dw_area.game-item .m img {
+    width: 100%;
+    height: 100%;
+}
+
+.dw_area.game-item .tip {
+    position: absolute;
+    left: 0.15rem;
+    top: 2.45rem;
+    width: 1.5rem;
+    text-align: center;
+    font-size: 0.2rem;
+    color: gray;
+    font-weight: bold;
+}
+
+.down-button {
+    display: block;
+    background: url(img/download.png);
+    background-size: 100%;
+    width: 1.5rem;
+    height: 0.7rem;
+    top: 1.9rem;
+    left: 0.15rem;
+    position: absolute;
+    background-repeat: no-repeat;
+}
+
+.dw_area.game-item .pic {
+    position: absolute;
+    left: 2rem;
+    top: 0.2rem;
+    /*background: orange;*/
+    width: 4.5rem;
+    height: 2.55rem;
+    background-size: 100% 100%;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+
+.guid{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+    text-align: center;
+    padding: 0 .3rem;
+    z-index: 99;
+    display: none;
+    box-sizing: border-box;
+}
+.guid img{
+    max-width: 100%;
+}
+.guid-1 {
+    position: relative;
+    padding: .2rem .5rem 0 1rem;
+
+}
+.guid-1 img {
+    margin-left: -0.5rem;
+    margin-top: 0;
+}
+.guid-1 .guid-close{
+    position: absolute;
+    right: .2rem;
+    top: .15rem;
+    width: .5rem;
+}
+.guid-2 {
+    margin-top: -0.4rem;
+}
+.guid-3 img{
+    width: 40%;
+    margin: 0 auto;
+    display: block;
+}
+.guid-4 img{
+    width: 40%;
+    margin: 0 auto;
+    display: block;
+}
+.guid-bottom{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+}
+
+.vertical-items {
+    margin: 0.25rem;
+    background: #eaf1f7;
+    padding: 0.18rem 0.22rem;
+    border-radius: 0.06rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.vertical-items .v-item {
+    width: 45%;
+}
+
+.vertical-items .v-item a {
+    display: inline-block;
+}
+
+.vertical-items .v-item .v-button {
+    display: block;
+    background: url(img/download.png);
+    background-size: cover;
+    width: 1.4rem;
+    height: 0.5rem;
+    background-repeat: no-repeat;
+    margin-bottom: 0!important;
+    margin: 0.1rem 0;
+}
+
+.vertical-items .v-item a .v-small {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.vertical-items .v-item a .v-big {
+    width: 100%;
+}
+
+.vertical-items .v-item .v-head {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.24rem;
+}
+
+.vertical-items .v-item .v-head .v-info {
+    text-align: center;
+    margin-left: 0.1rem;
+}

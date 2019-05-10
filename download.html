@@ -1,0 +1,364 @@
+<html>
+<head>
+<title>头彩娱乐 APP 下载</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=480">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="shortcut icon" href="https://tcxz.51safebag.com/updata/install/png/toucai.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" href="https://tcxz.51safebag.com/updata/install/png/toucai.ico" />
+<style media="screen">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	img{
+		width: 100%;
+	}
+	.main{
+		position: relative;
+
+	}
+	.download1{
+		position: absolute;
+		width: 70%;
+		left: 15%;
+		top: 150vw;
+	}
+	.download2{
+		position: absolute;
+		width: 70%;
+		left: 15%;
+		bottom: 17vw;
+	}
+	.stpWarp{
+		position: absolute;
+		width: 70%;
+		left: 15%;
+		bottom: 35vw
+	}
+	.stpWarp ul{
+		width: 100%;
+		/* width: 450vw; */
+		position: relative;
+		height: 74vw;
+		overflow: hidden;
+		list-style: none;
+	}
+	.stpWarp ul li{
+		width: 100%;
+		position: absolute;
+		float: left;
+		z-index: 2;
+		left: 100vw;
+	}
+	.stpWarp ul li.now{
+		z-index: 4;
+		left: 0;
+		transition: all 1s;
+	}
+	.stpWarp ul li.top{
+		left: -100vw;
+		transition: all 1s;
+	}
+	.stpWarp ul li.next{
+		left: 100vw;
+	}
+	.download{
+		animation: myfirst .5s infinite;
+	}
+	@keyframes myfirst
+	{
+		0%   {transform: scale(0.9)}
+		50% {transform: scale(1) }
+		100% {transform: scale(0.9) }
+	}
+	.topimg{
+		position: absolute;
+		/* display: none; */
+		opacity: 0;
+	}
+	.top1{
+		width: 80vw;
+		left: 10vw;
+		animation: top1 10s infinite;
+		animation-fill-mode:forwards;
+	}
+	.top2{
+		width: 80vw;
+		left: 10vw;
+		animation: top2 10s infinite;
+		animation-fill-mode:forwards;
+	}
+	.top3{
+		width: 80vw;
+		left: 10vw;
+		animation: top3 10s infinite;
+		animation-fill-mode:forwards;
+	}
+	.top4{
+		width: 88vw;
+		left: 6vw;
+		animation: top4 10s infinite;
+		animation-fill-mode:forwards;
+	}
+	@keyframes top1
+	{
+		0%   {opacity: 0;top: 15vw;}
+		48% {opacity: 0;top: 15vw;}
+		50% {opacity: 1;top: 22vw;}
+		100% {opacity: 1;top: 22vw; }
+	}
+	@keyframes top2
+	{
+		0%   {opacity: 0;top: 28vw;}
+		50%   {opacity: 0;top: 28vw;}
+		52% {opacity: 1;top: 39vw;}
+		100% {opacity: 1;top: 39vw;}
+	}
+	@keyframes top3
+	{
+		0%   {transform: scale(1.2);opacity: 0;top: 31vw;}
+		2%  {transform: scale(1);opacity: 1;top: 31vw;}
+		5% 	{transform: scale(1);opacity: 1;top: 31vw;}
+		7% {transform: scale(1);opacity: 1;top: 24vw; }
+		47% {transform: scale(1);opacity: 1;top: 24vw; }
+		48% {transform: scale(1.2);opacity: 0;top: 31vw;}
+		100% {transform: scale(1.2);opacity: 0;top: 31vw;}
+		/* 80%  {transform: scale(1);opacity: 1;top: 31vw;}
+		100% {transform: scale(1);opacity: 1;top: 24vw; } */
+	}
+	@keyframes top4
+	{
+		0%   {opacity: 0;top: 31vw;}
+		5%  {opacity: 0;top: 31vw;}
+		7%  {opacity: 1;top: 39vw;}
+		47%  {opacity: 1;top: 39vw;}
+		48%  {opacity: 0;top: 31vw;}
+		100% {opacity: 0;top: 31vw;}
+	}
+
+	.numScroll{
+		width: 55vw;
+		/* background-color: rgba(0,0,0,.5); */
+		height: 16vw;
+		position: absolute;
+		right: 6vw;
+		top: 249vw;
+		display: flex;
+	}
+	.numScroll>p{
+		flex:9;
+	    font-size: 7vw;
+		line-height: 13vw;
+		text-align: right;
+		margin-right: 3vw;
+		font-weight: bold;
+ 	 /* text-shadow: -0.3em 0.1em 0.1em #060; */
+		background-image:-webkit-linear-gradient(bottom,#f7bc2e,#fffe49 50%,#ffffff 80%,#ffffff 100%);
+
+	 -webkit-background-clip:text;
+
+	 -webkit-text-fill-color:transparent;
+	}
+	.numScroll>div{
+		flex:3;
+		text-align:right;
+	}
+	.numScroll>div>div{
+		float: right;
+		width: 14vw;
+		height: 14vw;
+		background-color: #fff;
+		border-radius:50%;
+		margin-top: 1vw;
+		margin-right: 1vw;
+			animation: myfirst .5s infinite;
+ 		background-image:-webkit-linear-gradient(bottom,#f99a27,#fff136 100%);
+	}
+	.numScroll>div>div p:first-child{
+		margin-top: 3.5vw;
+	}
+	.numScroll>div>div p{
+		text-align: center;
+		font-size: 10px;
+		color:#f90016;
+	}
+	.loadapp{
+		position: absolute;
+		display: block;
+    width: 23vw;
+    height: 8vw;
+    right: 5vw;
+    top: 4vw;
+		z-index: 1001;
+	}
+	.downtop{
+		position: fixed;left: 0;top: 0;
+		width: 100%;
+		z-index: 1000;
+	}
+</style>
+<script type="text/javascript">
+!function(e,t){typeof module!="undefined"?	module.exports=t():typeof define=="function"&&typeof define.amd=="object"?define(t):this[e]=t()}("domready",function(){var e=[],t,n=typeof document=="object"&&document,r=n&&n.documentElement.doScroll,i="DOMContentLoaded",s=n&&(r?/^loaded|^c/:/^loaded|^i|^c/).test(n.readyState);return!s&&n&&n.addEventListener(i,t=function(){n.removeEventListener(i,t),s=1;while(t=e.shift())t()}),function(t){s?setTimeout(t,0):e.push(t)}})
+var isMobile = {
+		Android: function() {return navigator.userAgent.match(/Android/i);},
+		BlackBerry: function() {return navigator.userAgent.match(/BlackBerry/i);},
+		iOS: function() {return navigator.userAgent.match(/iPhone|iPad|iPod/i);},
+		Opera: function() {return navigator.userAgent.match(/Opera Mini/i);},
+		Wechat: function() {return navigator.userAgent.match(/MicroMessenger/i);},
+		Windows: function() {return navigator.userAgent.match(/IEMobile/i);},
+		any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
+	};
+	var loadApk = function(loadUrl) {
+	  var el = document.getElementById('apklink');
+	  // assign url
+	  el.setAttribute('src', loadUrl);
+	}
+	domready(function () {
+
+	  //alert(navigator.userAgent);
+	  if (isMobile.Wechat() && isMobile.Android()) {
+	    document.getElementById('apkhelp').style.display = "block";
+	    document.getElementById('ioshelp').style.display = "none";
+			return ;
+	  }
+	  if (isMobile.Wechat() && isMobile.iOS()) {
+	    document.getElementById('apkhelp').style.display = "none";
+	    document.getElementById('ioshelp').style.display = "block";
+			return ;
+	  }
+
+	  if (isMobile.iOS()) {
+	    document.title = "头彩娱乐 苹果APP 下载";
+			setTimeout(function() {
+				location.href = 'itms-services://?action=download-manifest&url=https://tcxz.51safebag.com/tc/vip420.plist'
+	      // loadApk('itms-services://?action=download-manifest&url=https://tcxz.51safebag.com/tc/vip420.plist');
+	    },300)
+	  }
+		if (isMobile.Android()) {
+	    document.title = "头彩娱乐 安卓APP 下载";
+	    setTimeout(function() {
+				location.href = "https://tcxz.51safebag.com/tc/tcvip_latest_420.apk";
+	      // loadApk('https://tcxz.51safebag.com/tc/tcvip_latest_420.apk');
+	    },300)
+	  }
+
+	})
+	function loadApp(){
+		if (isMobile.iOS()) {
+				location.href = 'itms-services://?action=download-manifest&url=https://tcxz.51safebag.com/tc/vip420.plist'
+	  }
+		if (isMobile.Android()) {
+				location.href = "https://tcxz.51safebag.com/tc/tcvip_latest_420.apk";
+	  }
+	}
+</script>
+</head>
+<body >
+	<div class="main">
+		<img class="downtop" src="./img/downtop.png" alt="">
+		<a href="javascript:;" onclick="loadApp()" class="loadapp"></a>
+		<div class="numScroll">
+			<p id="rodamTxt">1,231,265,45</p>
+			<div class="">
+				<div class="">
+					<p>立即领吗</p>
+					<p>(10万次)</p>
+				</div>
+			</div>
+		</div>
+		<div class="top">
+			<img class="top1 topimg" src="./img/aaa1.png" alt="">
+			<img class="top2 topimg" src="./img/aaa2.png" alt="">
+			<img class="top3 topimg" src="./img/bbb1.png" alt="">
+			<img class="top4 topimg" src="./img/bbb2.png" alt="">
+		</div>
+		<img src="./img/download.png" alt="">
+		<a href="javascript:;" onclick="loadApp()" class="download1 download"> <img src="./img/downloadBtn.png" alt=""> </a>
+		<div class="stpWarp">
+			<ul id="banner">
+				<li class="now"> <img src="./img/stp0.png" alt=""> </li>
+				<li> <img src="./img/stp1.png" alt=""> </li>
+				<li> <img src="./img/stp2.png" alt=""> </li>
+				<li> <img src="./img/stp3.png" alt=""> </li>
+				<li> <img src="./img/stp4.png" alt=""> </li>
+				<li> <img src="./img/stp5.png" alt=""> </li>
+			</ul>
+		</div>
+		<a href="javascript:;" onclick="loadApp()" class="download2 download"> <img src="./img/downloadBtn.png" alt=""> </a>
+	</div>
+</body>
+<script src="https://act.mcake.com/fangli/2018/wap/commonjs/jquery.min.js"></script>
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	 function formatMoney(s, type) {
+     if (/[^0-9\.]/.test(s))
+         return "0.00";
+     if (s == null || s == "null" || s == "")
+         return "0.00";
+     s = s.toString().replace(/^(\d*)$/, "$1.");
+     s = (s + "00").replace(/(\d*\.\d\d)\d*/, "$1");
+     s = s.replace(".", ",");
+     var re = /(\d)(\d{3},)/;
+     while (re.test(s))
+         s = s.replace(re, "$1,$2");
+     s = s.replace(/,(\d\d)$/, ".$1");
+     if (type == 0) {
+         var a = s.split(".");
+         if (a[1] == "00") {
+             s = a[0];
+         }
+     }
+     return s;
+  }
+	function randomNum(minNum,maxNum){
+	    switch(arguments.length){
+	        case 1:
+	            return parseInt(Math.random()*minNum+1,10);
+	        break;
+	        case 2:
+	            return parseInt(Math.random()*(maxNum-minNum+1)+minNum,10);
+	        break;
+	            default:
+	                return 0;
+	            break;
+	    }
+	}
+	function initTimer(){
+		let len = $('#banner').width() / 6;
+		var idx = 0;
+		setInterval(function(){
+			idx++;
+			var num = idx%6;
+			$('#banner li').attr("class","");
+			if(num - 1 < 0) $('#banner li').eq(5).addClass('top');
+			else $('#banner li').eq(num-1).addClass('top');
+			if(num + 1 > 5) $('#banner li').eq(0).addClass('next');
+			else $('#banner li').eq(num+1).addClass('next');
+			$('#banner li').eq(num).addClass('now');
+		}, 3000);
+	}
+	function InitRandom(){
+
+		setInterval(function(){
+			$('#rodamTxt').text(getRandomNum())
+		}, 200)
+
+		function getRandomNum(){
+			var n1 = randomNum(1,9999999);
+			if (n1 < 1000000) n1 = randomNum(1,9) + '' + n1;
+			var n2 = n1 + '.'+randomNum(1,99);
+			return formatMoney(n2, 0);
+		}
+
+	}
+	InitRandom();
+	initTimer()
+})
+// $('#tccounter').html('789')
+		// $('#shakeVideo').play();
+</script>
+</html>

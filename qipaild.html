@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="viewport" content="width=480">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <style media="screen">
+    a{
+      text-decoration: none;
+    }
+    ul{
+      list-style:none;
+    }
+  	*{
+  		margin: 0;
+  		padding: 0;
+      font-size:12px;
+  	}
+    img{
+      width:100%;
+    }
+    .header{
+      width:100%;
+      position:relative;
+    }
+    .header a{
+      display:block;
+      position:absolute;
+      width:60vw;
+      left:20vw;
+      bottom:7vw;
+    }
+    .mainList, .star{
+      padding:0 3vw;
+    }
+    .star span{
+      display:inline-block;
+      width:3vw;
+    }
+    .mainListPlay{
+      padding:0 1vw;
+      margin-top:2vw;
+    }
+    .mainListPlay li{
+        display:flex;
+    }
+    .mainListPlay li span{
+      display:inline-block;
+      flex:25%;
+      padding:2vw 4vw;
+    }
+    .mainList>div{
+      background:#eff5f9;
+      border-radius:6px;
+      display:flex;
+      padding:2vw;
+      margin:2vw 0;
+    }
+    .mainList>div .left{
+      flex: 3;
+    }
+    .mainList>div .left b{
+      display:block;
+      margin-left: 1vw;
+      width: 81%;
+      text-align: center;
+      font-size:11px;
+    }
+    .mainList>div .left a{
+      margin:2vw 0;
+      margin-left: 1vw;
+      width: 81%;
+      display:block;
+      padding:1vw 0;
+      background:#0087ff;
+      color:#fff;
+      border-radius:4px;
+      text-align: center;
+    }
+    .mainList>div .left p{
+      padding: 0 4vw 0 2vw;
+    }
+    .mainList>div .right{
+      flex: 9;
+    }
+    .footer{
+      text-align: center;
+      color:#fff;
+      background:#424a55;
+      font-size:13px;
+      font-weight:bold;
+      padding:3vw 0;
+      line-height:5.4vw;
+      letter-spacing:1vw;
+    }
+  </style>
+  <script type="text/javascript">
+    var isMobile = {
+    		Android: function() {return navigator.userAgent.match(/Android/i);},
+    		BlackBerry: function() {return navigator.userAgent.match(/BlackBerry/i);},
+    		iOS: function() {return navigator.userAgent.match(/iPhone|iPad|iPod/i);},
+    		Opera: function() {return navigator.userAgent.match(/Opera Mini/i);},
+    		Wechat: function() {return navigator.userAgent.match(/MicroMessenger/i);},
+    		Windows: function() {return navigator.userAgent.match(/IEMobile/i);},
+    		any: function() {return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());}
+    	};
+    function downloaad(){
+      if (isMobile.iOS()) {
+  				location.href = 'itms-services://?action=download-manifest&url=https://res.hphrf.com/blue/update/1.7.1.16/apps/10209/ipa/install_hphrf_0401.plist'
+  	  }
+  		if (isMobile.Android()) {
+  				location.href = "https://res.hphrf.com/blue/update/1.8.1.17/apps/10209/hyGameCenter.apk";
+  	  }
+    }
+    // download()
+  </script>
+</head>
+<body>
+<div class="main">
+  <div class="header">
+    <img src="./img/qipai_01.png" alt="">
+    <a href="javascript:;" onclick="downloaad()"> <img src="./img/qipaiBtn.png" alt=""></a>
+  </div>
+  <div class="star">
+    <span> <img src="./img/qipai_04.png" alt=""> </span>
+    <span> <img src="./img/qipai_04.png" alt=""> </span>
+    <span> <img src="./img/qipai_04.png" alt=""> </span>
+    <span> <img src="./img/qipai_04.png" alt=""> </span>
+    <span> <img src="./img/qipai_04.png" alt=""> </span>
+    <b>178946人下载</b>
+  </div>
+  <ul class="mainListPlay">
+    <li>
+      <span> <img src="./img/qipai_13.png" alt=""> </span>
+      <span> <img src="./img/qipai_15.png" alt=""> </span>
+      <span> <img src="./img/qipai_08.png" alt=""> </span>
+      <span> <img src="./img/qipai_10.png" alt=""> </span>
+    </li>
+    <li>
+      <span> <img src="./img/qipai_21.png" alt=""> </span>
+      <span> <img src="./img/qipai_22.png" alt=""> </span>
+      <span> <img src="./img/qipai_23.png" alt=""> </span>
+      <span> <img src="./img/qipai_24.png" alt=""> </span>
+    </li>
+  </ul>
+  <div class="mainList">
+    <div class="">
+      <ul class="left">
+        <li>
+          <p><img src="./img/qipai_30.png" alt=""></p>
+          <a href="javascript:;" onclick="downloaad()">下载</a>
+          <b>1000万下载</b>
+        </li>
+      </ul>
+      <div class="right">
+        <img src="./img/qipai_33.png" alt="">
+      </div>
+    </div>
+
+    <div class="">
+      <ul class="left">
+        <li>
+          <p><img src="./img/qipai_37.png" alt=""></p>
+          <a href="javascript:;" onclick="downloaad()">下载</a>
+          <b>1000万下载</b>
+        </li>
+      </ul>
+      <div class="right">
+        <img src="./img/qipai_38.png" alt="">
+      </div>
+    </div>
+
+    <div class="">
+      <ul class="left">
+        <li>
+          <p><img src="./img/qipai_41.png" alt=""></p>
+          <a href="javascript:;" onclick="downloaad()">下载</a>
+          <b>1000万下载</b>
+        </li>
+      </ul>
+      <div class="right">
+        <img src="./img/qipai_42.png" alt="">
+      </div>
+    </div>
+
+    <div class="">
+      <ul class="left">
+        <li>
+          <p><img src="./img/qipai_45.png" alt=""></p>
+          <a href="javascript:;" onclick="downloaad()">下载</a>
+          <b>1000万下载</b>
+        </li>
+      </ul>
+      <div class="right">
+        <img src="./img/qipai_46.png" alt="">
+      </div>
+    </div>
+
+    <div class="">
+      <ul class="left">
+        <li>
+          <p><img src="./img/qipai_49.png" alt=""></p>
+          <a href="javascript:;" onclick="downloaad()">下载</a>
+          <b>1000万下载</b>
+        </li>
+      </ul>
+      <div class="right">
+        <img src="./img/qipai_50.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>好玩到爆肝的游戏！</p>
+    <p>还不赶快加入！</p>
+  </div>
+</div>
+
+</body>
+</html>
