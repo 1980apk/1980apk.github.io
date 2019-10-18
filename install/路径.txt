@@ -1,0 +1,32 @@
+https://gitee.com/appdata/install/raw/master/embedded.mobileprovision                  ios配置文件
+
+
+https://gitee.com/appdata/install/raw/master/script/jquery.js             
+https://gitee.com/appdata/install/raw/master/script/ios_auth.js
+
+
+https://gitee.com/appdata/install/raw/master/style/txcstx.css     
+
+
+https://gitee.com/appdata/install/raw/master/style/img/5049.jpg                 棋牌图片
+
+
+https://gitee.com/appdata/install/raw/master/style/css/pub_reset.css
+
+
+
+https://gitee.com/appdata/install/raw/master/styles/analytics.js       华亿
+
+
+
+
+https://gitee.com/appdata/install/raw/master/style/img/plist/plist.txt     plist
+
+
+
+
+
+
+
+
+
