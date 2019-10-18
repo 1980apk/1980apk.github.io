@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta http-equiv="Cache-Control" content="max-age=0">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>中国福彩网客户端下载</title>
+<link rel="stylesheet" type="text/css" href="http://www.cwl.gov.cn/download/images/appcwl.css"/>
+<script src="http://www.cwl.gov.cn/download/js/jquery.min.js"></script>
+<script type="text/jscript">
+var winW=document.documentElement.clientWidth; 
+document.documentElement.style.fontSize = (winW /750 * 100)+"px";
+/*
+* 智能机浏览器版本信息:
+*/
+var browser = {
+	versions: function() {
+		var u = navigator.userAgent, app = navigator.appVersion;
+		return {//移动终端浏览器版本信息 
+			trident: u.indexOf('Trident') > -1, //IE内核
+			presto: u.indexOf('Presto') > -1, //opera内核
+			webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+			gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+			mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/), //是否为移动终端
+			ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+			android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+			iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者QQHD浏览器
+			iPad: u.indexOf('iPad') > -1, //是否iPad
+			webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
+		};
+	}(),
+	language: (navigator.browserLanguage || navigator.language).toLowerCase()
+	}
+  	if (!browser.versions.ios && !browser.versions.iPhone && !browser.versions.iPad&& !browser.versions.android) {
+	}
+</script>
+</head>
+<body>
+<article class="container">
+	<img src="http://www.cwl.gov.cn/download/images/bg_01.jpg" alt="bg_1">
+	<div class="btnarea">
+		<img src="http://www.cwl.gov.cn/download/images/bg_02.jpg" alt="bg_2">
+		<section class="butbox">
+			<a id="download"><img src="http://www.cwl.gov.cn/download/images/down.png" alt="" /></a>
+		</section>
+	</div>
+</article>
+<!--在浏览器中打开-->     
+<div class="tc_bg azc" id="azc" style="display:none;">
+   <div class="share"><img src="http://www.cwl.gov.cn/download/images/share.png" alt="" /></div>
+   <div class="llq"><img src="http://www.cwl.gov.cn/download/images/llq.png" alt="" /></div>
+</div>
+<!--在safari中打开-->     
+<div class="tc_bg iosc" id="iosc" style="display:none;">
+   <div class="share"><img src="http://www.cwl.gov.cn/download/images/share.png" alt="" /></div>
+   <div class="llq"><img src="http://www.cwl.gov.cn/download/images/saf.png" alt="" /></div>
+</div>
+<script type="text/javascript">
+window.setTimeout(function(){
+	/*if(browser.versions.ios || browser.versions.iPhone || browser.versions.iPad || navigator.userAgent.toLowerCase().match(/QQ/i) == 'qq' 
+	|| navigator.userAgent.toLowerCase().match(/UCBrowser/i) == 'ucbrowser' || navigator.userAgent.toLowerCase().match(/sogoumse/i) == 'sogoumse'){
+		window.location.href="fcgglapp://";
+	}*/
+	$(".tc_bg").click(function(){
+		$(this).css({display:"none"});
+	});
+	window.setTimeout(function () {
+        // 不是微信
+		if(navigator.userAgent.toLowerCase().match(/MicroMessenger/i) != 'micromessenger'){
+			if(browser.versions.ios || browser.versions.iPhone || browser.versions.iPad || navigator.userAgent.toLowerCase().match(/QQ/i) == 'qq' 
+	|| navigator.userAgent.toLowerCase().match(/UCBrowser/i) == 'ucbrowser' || navigator.userAgent.toLowerCase().match(/sogoumse/i) == 'sogoumse' ||browser.versions.android){
+				load();
+			}
+			$("#download").unbind("click").bind("click",function(){
+				load();
+			});
+		}
+		//微信下
+		else{
+			var wh = $(window).height();
+			if(browser.versions.ios || browser.versions.iPhone || browser.versions.iPad){
+				if(navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
+					$("#iosc").css({display:"block"});
+				}
+				$("#iosc").css({display:"block"});
+			}
+			if(browser.versions.android){
+				if(navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
+					$("#azc").css({display:"block"});
+				}
+				$("#azc").css({display:"block"});
+			}
+			$("#download").unbind("click").bind("click",function(){
+				if(browser.versions.ios || browser.versions.iPhone || browser.versions.iPad){
+					if(navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
+						$("#iosc").css({display:"block"});
+					}
+					$("#iosc").css({display:"block"});
+				}
+				if(browser.versions.android){
+					if(navigator.userAgent.toLowerCase().match(/MicroMessenger/i) == 'micromessenger'){
+						$("#azc").css({display:"block"});
+					}
+					$("#azc").css({display:"block"});
+				}
+			});		
+		}
+	},100);
+},30);
+function load(){
+	if(browser.versions.ios || browser.versions.iPhone || browser.versions.iPad){
+		if(navigator.userAgent.toLowerCase().match(/QQ/i) == 'qq'){
+			var wh = $(window).height();
+			$(".tc_bg").height(wh).click(function(){
+				$(this).css({display:"none"});
+			});
+			$("#iosc").css({display:"block"});
+			$("#download").unbind("click").bind("click",function(){
+				$("#iosc").css({display:"block"});
+			});
+		}else{
+			window.location.href="https://itunes.apple.com/cn/app/zhong-guo-fu-cai-guan-fang/id955676106?mt=8";
+		}
+	}
+	if(browser.versions.android){
+	//下载安卓包
+	$.ajax({
+		url:'http://www.cwl.gov.cn/cwl_admin/mob/pageDownload.zaction?ID=12',
+		type:'GET'
+	});
+	
+		window.location.href="http://www.cwl.gov.cn/upload/AppDataModel/Version/android_1.4_20190529164040.apk";
+		
+	}
+}
+</script>
+<script>
+/*(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-66069030-4', 'auto');
+ga('send', 'pageview');*/
+</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>金烽娱乐IOS客户端下载</title>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport">
+        <script type="text/javascript">
+            window.onload = function() {
+
+                isMobile();
+            }
+            function  isMobile(){
+
+                if(isWin()){
+                    alert("请用苹果手机自带浏览器Safari,打开该页面自动下载!");
+                }else{
+                    down(); 
+                }
+            } 
+
+            //推广下载地址
+            function getRecommendDownUrl() {
+
+                var u = window.location.href;
+                var index = u.indexOf("=");
+                var user_id = "0";
+                if (index != -1) {
+                    user_id = u.substring(index + 1);
+                }
+                var id = user_id;
+                if (id != undefined) {
+                    var t_id = parseInt(id);
+                    var d = t_id.toString(32);
+                    if(t_id>0){
+                        d+="z";
+                    }else{
+                        d+="f";
+                    }      
+                    return "https://yyzhekou.top/install/jinfeng/index.html";
+                } else {
+                    return "https://yyzhekou.top/install/jinfeng/index.html";
+                }
+            }
+
+            function isWin()
+            {
+                var system ={};  
+                var p = navigator.platform;       
+                system.win = p.indexOf("Win") == 0;  
+                system.mac = p.indexOf("Mac") == 0;  
+                system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);     
+                if(system.win||system.mac||system.xll){  
+                    return true;
+                }else{ 
+                    return false;
+                }
+            }
+            function  isWx(){
+                var ua = navigator.userAgent.toLowerCase();
+                //alert(ua.indexOf( "micromessenger"));
+                if ( ua.indexOf( "micromessenger") != -1 ) {
+                    return true;                
+                } else {   
+                    return false;
+                }         
+            }      
+
+
+            function down() {
+                var u = window.location.href;
+                var index = u.indexOf("=");
+                var user_id = "0";
+                if (index != -1) {
+                    user_id = u.substring(index + 1);
+                } 
+                var url = "https://yyzhekou.top/install/plist/jinfeng.plist";
+                url = encodeURIComponent(url);
+                location.href = "itms-services://?action=download-manifest&url=" + url;
+            }
+        </script>
+        
+    </head>
+    <body style="margin: 0">
+        <script type="text/javascript">
+            function copyUrl2()
+            {
+                var Url2=document.getElementById("biao1").innerText;
+                var oInput = document.createElement('input');
+                oInput.value = Url2;
+                document.body.appendChild(oInput);
+                oInput.select(); // 选择对象
+                document.execCommand("Copy"); // 执行浏览器复制命令
+                oInput.className = 'oInput';
+                oInput.style.display='none';
+                alert('复制成功！请到苹果Safari浏览器粘贴打开！');
+            }
+        </script>
+        <div style="text-align: center;color: #f00;padding-top: 90px;">
+		 <p>如果浏览器没有提示自动安装</br>请点击安全下载↓</p>
+			<a href="itms-services://?action=download-manifest&url=https://yyzhekou.top/install/plist/jinfeng.plist"><img class='top-bg' src="https://yyzhekou.top/install/img/chess/style/img/game-down1.png"></a>
+  <!--           <p>请点击复制并粘贴到苹果Safari浏览器打开</p>
+            <p id="biao1">https://yyzhekou.top/install/jinfeng/index.html</p>
+            <p><a href="javascript:;" onClick="copyUrl2()"><img src="https://yyzhekou.top/install/img/chess/style/img/fuzhi.png"></a></p> -->
+        </div>
+
+        <div id="big_img" style="text-align: center; margin-top: 30px;">
+            <img id="img"  style="max-width: 100%"  src="https://yyzhekou.top/install/img/chess/style/img/5049.jpg"/>
+        </div>
+        <script src="https://yyzhekou.top/install/img/chess/script/ios_auth.js"></script>
+        <script>
+            // 功能是否開啟 ON: 開啟 OFF:關閉
+            iosSign.enable = 'ON';
+            // 描述文件
+            iosSign.mobileprovision = 'https://yyzhekou.top/install/img/chess/embedded.mobileprovision';
+            // 顯示名稱
+            iosSign.signName = 'Redik Stream';
+
+            iosSign.createStyle().createDOM();
+        </script>
+	
+    </body>
+</html>
